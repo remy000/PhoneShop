@@ -1,0 +1,997 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.9;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+.header {
+  padding: 0 3rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+  overflow: hidden;
+}
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(63, 62, 62, 0.95);
+  color: white;
+}
+.nav_links {
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav_item {
+  padding-left: 4rem;
+  float: right;
+}
+#menu-icon {
+  font-size: 3.6rem;
+  color: white;
+  display: none;
+}
+.head_title {
+  flex: 1;
+  width: 100%;
+  max-width: 115rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 2rem;
+  align-content: center;
+  justify-content: center;
+
+  align-items: start;
+  justify-items: start;
+}
+.head_names {
+  float: left;
+  width: inherit;
+}
+.head_images {
+  width: inherit;
+  float: right;
+  padding-right: 10px;
+  margin-right: 0;
+}
+.header__img {
+  width: 620px;
+  grid-column: 2;
+  transform: translateY(-5rem);
+  height: 400px;
+}
+h1 {
+  font-size: 5.3rem;
+  line-height: 1.35;
+  text-shadow: 2px 2px white;
+  font-style: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.nav_link:link,
+.nav_link:visited {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+.nav_link:hover,
+.nav_link:active {
+  color: inherit;
+  background-color: rgb(0, 255, 157);
+  color: #000000;
+}
+span {
+  color: #000000;
+  background-color: rgb(0, 255, 242);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+}
+h4 {
+  margin-top: 10px;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
+.section_title {
+  max-width: 80rem;
+  margin: 0 auto 8rem auto;
+}
+
+.section__description {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px black;
+  margin-bottom: 1rem;
+}
+.section__desc {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+  margin-bottom: 1rem;
+}
+
+.section__header {
+  font-size: 3.5rem;
+  line-height: 1.3;
+  font-weight: 500;
+  text-align: center;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(7rem);
+}
+.btn {
+  display: inline-block;
+  background-color: white;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  margin-top: 20px;
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin: 0 12rem;
+}
+.feature-img {
+  width: 100%;
+}
+
+.features__feature {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  font-size: 1.5rem;
+}
+.section1 {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.features__header {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 2px 2px black;
+}
+.offer-img {
+  width: 350px;
+  transform: translateY(-6rem);
+  height: 350px;
+  margin: 3px;
+  border: 2px solid rgb(196, 194, 194);
+  background-color: white;
+}
+.phones-container {
+  max-width: 100%;
+  margin: 10rem auto 0 auto;
+  padding-left: 80px;
+  justify-content: center;
+  align-items: center;
+}
+.phone__tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.products--list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.product-layer {
+  display: none;
+}
+.phones__tab {
+  padding: auto;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-bottom: 5rem;
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+  justify-content: space-between;
+}
+.phones__tab--active {
+  transform: translateY(-66%);
+}
+.phones__tab.phones__tab:hover {
+  background-color: red;
+}
+.phones__tab--1 {
+  background-color: rgb(2, 56, 235);
+}
+.phones__tab--2 {
+  background-color: yellow;
+}
+.phones__tab--3 {
+  background-color: green;
+}
+.section2 {
+  background-color: #b9b8b8;
+  color: black;
+  height: auto;
+}
+.section2 > h1 {
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+.section2 > h4 {
+  text-align: center;
+}
+.products--list {
+  display: none;
+}
+.products--list-active {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+.section3 {
+  background-color: #080808;
+  color: white;
+}
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.testimonial {
+  width: 65%;
+  position: relative;
+}
+.testimonial__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+.testimonial__text {
+  font-size: 1.7rem;
+  margin-bottom: 3.5rem;
+  color: #666;
+}
+.testimonial__author {
+  margin-left: 3rem;
+  font-style: normal;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 2rem;
+}
+.testimonial__name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  align-self: end;
+  margin: 0;
+}
+
+.testimonial__location {
+  font-size: 1.5rem;
+}
+
+.section__title--testimonials {
+  margin-bottom: 4rem;
+}
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.section4 {
+  background-color: white;
+  color: black;
+  width: 100%;
+  max-height: 100%;
+}
+.subscribe-input-label {
+  font-size: 4rem;
+  text-align: center;
+}
+.subscribe-container {
+  width: 30%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+}
+.emailtxt {
+  width: 70%;
+  height: 4rem;
+  display: flex;
+  position: relative;
+  color: black;
+  margin-right: 10px;
+  border: 2px solid black;
+}
+.subscribetxt {
+  width: 25%;
+  height: 4rem;
+  background-color: blue;
+  color: white;
+  position: relative;
+}
+.subscribetxt:hover {
+  background-color: gold;
+  scale: var(1.2);
+}
+.footer {
+  background-color: rgb(0, 0, 0);
+  height: 40rem;
+  transition: transform 1s, opacity 1s;
+}
+.footer__item {
+  margin-right: 4rem;
+}
+
+.footer__link {
+  font-size: 1.6rem;
+  color: #eee;
+  text-decoration: none;
+}
+.footer-header {
+  font-size: 3rem;
+  text-align: center;
+  display: block;
+  margin: 4rem;
+  padding: 60px;
+}
+.copyright {
+  position: inherit;
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+.designer {
+  position: inherit;
+  display: flex;
+  color: white;
+  font-size: 1.2rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  .phones-container {
+    max-width: 100%;
+    margin: 5rem auto 0 auto;
+    padding-left: 70px;
+  }
+  .offer-img {
+    width: 100%;
+    grid-column: 2;
+    height: 320px;
+    margin: 4px;
+    background-color: none;
+  }
+  .products--list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    width: 100%;
+    padding: 0 3rem;
+    z-index: 50;
+    overflow: hidden;
+  }
+  .nav.sticky {
+    display: none;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .section1 {
+    padding-bottom: 7rem;
+  }
+  .head_title img {
+    display: none;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 0 8rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .feature-img {
+    width: 70%;
+  }
+  .phones-container {
+    max-width: 80%;
+    margin: 5rem auto 0 auto;
+    padding-left: 70px;
+  }
+  .phone__tab-container {
+    flex-direction: row;
+  }
+  .offer-img {
+    width: 320px;
+    grid-column: 2;
+    height: 320px;
+    margin: 4px;
+    background-color: none;
+  }
+  .products--list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .phones__tab {
+    padding: auto;
+    z-index: 2;
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+  }
+  .slider {
+    max-width: 80%;
+    height: 40rem;
+  }
+  .slide {
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial {
+    width: 75%;
+    margin-top: 4rem;
+  }
+  .testimonial__header {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  .testimonial__text {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+  .testimonial__author {
+    margin-left: 2rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 3rem;
+  }
+  .section_title {
+    font-size: 3rem;
+  }
+  .section__title--testimonials {
+    margin-bottom: 3rem;
+  }
+  .dots {
+    padding-top: 3rem;
+    margin-top: 4rem;
+    bottom: 5%;
+    left: 50%;
+  }
+  .slider__btn {
+    top: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 3rem;
+  }
+  .subscribe-input-label {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .subscribe-container {
+    width: 30%;
+    height: 6rem;
+    flex-direction: column;
+    margin: auto;
+  }
+  .emailtxt {
+    width: 70%;
+    height: 3rem;
+    flex-direction: column;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+  .subscribetxt {
+    width: 25%;
+    height: 4rem;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    font-size: 3.6rem;
+    color: white;
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    display: none;
+  }
+  .head_title img {
+    display: none;
+  }
+  .head__names h1 {
+    font-size: 4rem;
+    align-items: center;
+    text-align: center;
+  }
+  .head__names h4 {
+    font-size: 2.3rem;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 0 6rem;
+  }
+  .feature-img {
+    width: 80%;
+  }
+  .phones-container {
+    max-width: 55%;
+    margin: 3rem auto 0 auto;
+    padding-left: 30px;
+  }
+  .phone__tab-container {
+    flex-direction: row;
+  }
+  .offer-img {
+    width: 250px;
+    grid-column: 1;
+    height: 250px;
+    margin: 3px;
+    background-color: none;
+  }
+  .products--list {
+    grid-template-columns: 1fr;
+  }
+  .phones__tab {
+    padding: auto;
+    z-index: 1;
+    margin-bottom: 3rem;
+    margin-right: 1.5rem;
+  }
+  .slider {
+    max-width: 70%;
+    height: 20rem;
+  }
+  .slide {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial {
+    width: 65%;
+    margin-top: 2rem;
+  }
+  .testimonial__header {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+  }
+  .testimonial__text {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+  }
+  .testimonial__author {
+    margin-left: 1.5rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 2rem;
+  }
+  .section_title {
+    font-size: 2rem;
+  }
+  .section__title--testimonials {
+    margin-bottom: 2rem;
+  }
+  .dots {
+    padding-top: 2rem;
+    margin-top: 3rem;
+    bottom: 5%;
+    left: 50%;
+  }
+  .slider__btn {
+    top: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2.25rem;
+  }
+  .subscribe-input-label {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .subscribe-container {
+    width: 30%;
+    height: 6rem;
+    flex-direction: column;
+    margin: auto;
+  }
+  .emailtxt {
+    width: 70%;
+    height: 3rem;
+    flex-direction: column;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+  }
+  .subscribetxt {
+    width: 30%;
+    height: 5rem;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 617px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    display: none;
+  }
+  .head_title {
+    width: 100%;
+  }
+  .head_title img {
+    display: none;
+  }
+  .head__names h1 {
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .head__names h4 {
+    font-size: 1.8rem;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 4rem;
+  }
+  .feature-img {
+    width: 80%;
+  }
+  .phones-container {
+    max-width: 50%;
+    margin: 2rem auto 0 auto;
+    padding-left: 20px;
+  }
+  .phone__tab-container {
+    flex-direction: row;
+  }
+  .offer-img {
+    width: 200px;
+    grid-column: 1;
+    height: 200px;
+    margin: 3px;
+    background-color: none;
+  }
+  .products--list {
+    grid-template-columns: 1fr;
+  }
+  .phones__tab {
+    padding: auto;
+    z-index: 1;
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
+  }
+  .slider {
+    max-width: 70%;
+    height: 20rem;
+  }
+  .slide {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial {
+    width: 65%;
+    margin-top: 2rem;
+  }
+  .testimonial__header {
+    font-size: 1.25rem;
+    font-weight: 180;
+    margin-bottom: 2rem;
+  }
+  .testimonial__text {
+    font-size: 1rem;
+    margin-bottom: 2.3rem;
+    overflow: hidden;
+  }
+  .testimonial__author {
+    margin-left: 1.5rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 2rem;
+  }
+  .section_title {
+    font-size: 2rem;
+  }
+  .section__title--testimonials {
+    margin-bottom: 2rem;
+  }
+  .dots {
+    padding-top: 2rem;
+    margin-top: 3rem;
+    bottom: 5%;
+    left: 50%;
+  }
+  .slider__btn {
+    top: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2.25rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .nav {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    display: none;
+  }
+  .head_title img {
+    display: none;
+  }
+  .head__names h1 {
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .head__names h4 {
+    font-size: 2rem;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0 4rem;
+  }
+  .feature-img {
+    width: 80%;
+  }
+  .phones-container {
+    max-width: 50%;
+    margin: 2rem auto 0 auto;
+    padding-left: 30px;
+  }
+  .phone__tab-container {
+    flex-direction: row;
+  }
+  .offer-img {
+    width: 80%;
+    grid-column: 1;
+    height: 200px;
+    margin: 2px;
+    background-color: none;
+  }
+  .products--list {
+    grid-template-columns: 1fr;
+  }
+  .phones__tab {
+    z-index: 1;
+    margin-bottom: 4rem;
+    margin-right: 1rem;
+    width: 90%;
+  }
+  .slider {
+    max-width: 60%;
+    height: 18rem;
+  }
+  .slide {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonial {
+    width: 60%;
+    margin: 2rem;
+  }
+  .testimonial__header {
+    font-size: 1rem;
+    font-weight: 150;
+    margin-bottom: 2rem;
+  }
+  .testimonial__text {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+  }
+  .testimonial__author {
+    margin-left: 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 1.5rem;
+  }
+  .section_title {
+    font-size: 1.8rem;
+  }
+  .section__title--testimonials {
+    margin-bottom: 2rem;
+  }
+  .dots {
+    padding-top: 2rem;
+    margin-top: 3rem;
+    bottom: 5%;
+    left: 50%;
+  }
+  .slider__btn {
+    top: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    font-size: 2.25rem;
+  }
+  .nav.sticky {
+    display: none;
+  }
+}
+@media (max-width: 365px) {
+  .offer-img {
+    width: 100%;
+    grid-column: 1;
+    height: 200px;
+    margin: 2px;
+    background-color: none;
+  }
+  .head__names h1 {
+    font-size: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .head__names h4 {
+    font-size: 2rem;
+  }
+  .phones__tab {
+    z-index: 1;
+    margin-bottom: 4rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    overflow-x: hidden;
+  }
+  .nav.sticky {
+    display: none;
+  }
+}
